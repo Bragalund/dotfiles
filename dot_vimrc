@@ -24,8 +24,28 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'jremmen/vim-ripgrep'
+Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim' 
+Plug 'vim-utils/vim-man'
+Plug 'git@github.com:valloric/YouCompleteMe.git'
+Plug 'mbbill/undotree'
+Plug 'lyuts/vim-rtags'
+Plug 'git@github.com:kien/ctrlp.vim.git'
 
 call plug#end() 
 
 colorscheme gruvbox
 set background=dark
+
+let mapleader=" "
+let g:netrw_browse_split=2
+let g:ctrlp_use_cache=0
+
+" Remap - u = viser undotreemap
+nnoremap <leader>u :UndoTreeShow<CR>
+
+" YCM  
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>  
+nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>  
+
