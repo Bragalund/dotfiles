@@ -14,7 +14,6 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -45,7 +44,9 @@ let g:ctrlp_use_cache=0
 " Remap - u = viser undotreemap
 nnoremap <leader>u :UndoTreeShow<CR>
 
+" Remap - linting
+nnoremap <leader>jsonlint :%!jq<CR>
+
 " YCM  
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>  
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>  
-
