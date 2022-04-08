@@ -45,7 +45,8 @@ let g:ctrlp_use_cache=0
 nnoremap <leader>u :UndoTreeShow<CR>
 
 " Remap - linting
-nnoremap <leader>jsonlint :%!jq<CR>
+nnoremap <leader>lintjson :%!jq<CR>
+nnoremap <leader>lintxml :xmllint -format -<CR>
 
 " YCM  
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>  
