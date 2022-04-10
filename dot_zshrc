@@ -1,45 +1,44 @@
-FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=true
-DOTNET_CLI_TELEMETRY_OPTOUT=true
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:/usr/localbin:$PATH
-
-source $HOME/.evm/scripts/evm
 
 # Java installation  
-export JAVA_HOME=i/usr/lib/java/
+export JAVA_HOME=/usr/lib/java/
 
 # Dotnet installation
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 export DOTNET_ROOT=$HOME/dotnet
+FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=true
+DOTNET_CLI_TELEMETRY_OPTOUT=true
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+# NVM for node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Erlang virtual machine
+source $HOME/.evm/scripts/evm
 
 # If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/localbin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/bragalund/.oh-my-zsh"
-# export TERM=screen-256color
 
-# Uses vim in manpages to get highlighting 
-# and searchhits to get highlighted 
-# by cursor
-# eks. man ifconfig -> open manpage in vim
+# Vim in manpages 
+# changes colours and highlighting 
+# searchhits get highlighted by cursor
 
 export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
         -c 'nnoremap i <nop>' \
             -c 'nnoremap <Space> <C-f>' \
                 -c 'noremap q :quit<CR>' -\""
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# Oh-my-zsh-theme  
+# More at https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# Or use "random" for different theme every time  
 ZSH_THEME="robbyrussell"
 
 
@@ -131,11 +130,4 @@ plugins=(git)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
-# for .net 6
 source $ZSH/oh-my-zsh.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
