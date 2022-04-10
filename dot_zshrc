@@ -9,6 +9,7 @@ export DOTNET_ROOT=$HOME/dotnet
 FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=true
 DOTNET_CLI_TELEMETRY_OPTOUT=true
 
+# Language
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -35,6 +36,7 @@ export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
         -c 'nnoremap i <nop>' \
             -c 'nnoremap <Space> <C-f>' \
                 -c 'noremap q :quit<CR>' -\""
+
 
 # Oh-my-zsh-theme  
 # More at https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
