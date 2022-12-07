@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Erlang virtual machine
-source $HOME/.evm/scripts/evm
+# source $HOME/.evm/scripts/evm
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -27,6 +27,8 @@ export PATH=$HOME/.local/bin:/usr/localbin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/bragalund/.oh-my-zsh"
+
+alias loic="loic.sh run"
 
 # Vim in manpages 
 # changes colours and highlighting 
